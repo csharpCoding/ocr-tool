@@ -15,7 +15,7 @@ async def read_image(img_path, lang='eng'):
     """
 
     try:
-        return pytesseract.image_to_string(img_path, lang=lang)
+        return pytesseract.image_to_string(img_path, lang='lets', config='--psm 6')
     except:
         return "[ERROR] Unable to process file: {0}".format(img_path)
 
