@@ -16,7 +16,7 @@ async def read_image(img_path, lang='eng'):
 
     pytesseract.pytesseract.tesseract_cmd = '/app/vendor/tesseract-ocr/bin/tesseract'
     try:
-        return pytesseract.image_to_string(img_path)
+        return pytesseract.image_to_string(img_path, lang='lets', config='--psm 6')
     except:
         return "[ERROR] Unable to process file: {0}".format(img_path)
 
