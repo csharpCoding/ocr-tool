@@ -14,7 +14,7 @@ async def read_image(img_path, lang='eng'):
     :text: str, converted text from image
     """
 
-    pytesseract.pytesseract.tesseract_cmd = './vendor/tesseract-ocr/bin/tesseract'
+    pytesseract.pytesseract.tesseract_cmd = '/app/vendor/tesseract-ocr/bin/tesseract'
     try:
         return pytesseract.image_to_string(img_path, lang='lets', config='--psm 6')
     except:
